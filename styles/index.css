@@ -1,4 +1,12 @@
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Poppins:wght@600;700&display=swap');
+
 *{
     margin: 0 0;
     padding: 0 0;
+    --primary: #4361EE;
+    --secondary: #757575;
+    --foreground: #FFFFFF;
+    --background: #252525;
+    --background-alt: #353535;
 }
