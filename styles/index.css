@@ -81,3 +81,81 @@ header > .header-wrapper{
     color: #858585;
     font-size: 16px;
 }
+
+/* Main section stylings */
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Sidebar stylings */
+main > .sidebar{
+    width: 55%;
+    height: 100vh;
+    padding-bottom: 32px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow-y: scroll;
+}
+
+/* Custom scrollbar */
+.sidebar::-webkit-scrollbar{
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: var(--background-alt);
+    border-radius: 5px;
+}
+
+.sidebar > .sidebar-close-icon{
+    color: var(--foreground);
+    font-size: 24px;
+    margin: 32px;
+    align-self: flex-end;
+}
+
+.sidebar > .sidebar-wrapper{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    row-gap: 16px;
+}
+
+.sidebar-wrapper > .main-list, .sidebar-wrapper > .genre-list{
+    width: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 16px;
+}
+
+.main-list a, .genre-list a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.genre-list > .genre-title{
+    color: var(--foreground);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
