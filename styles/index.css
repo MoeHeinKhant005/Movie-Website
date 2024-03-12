@@ -87,9 +87,9 @@ main{
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 /* Sidebar stylings */
@@ -107,7 +107,7 @@ main > .sidebar{
     left: 0px;
     overflow-y: scroll;
 }
-
+    
 /* Custom scrollbar */
 .sidebar::-webkit-scrollbar{
     width: 5px;
@@ -231,4 +231,78 @@ main > .sidebar{
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
+}
+
+/* Every movie sections stylings */
+.movie-section{
+    width: 100%;
+    height: auto;
+    padding: 24px 0;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    row-gap: 16px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+/* Hide horizontal scrollbar */
+.movie-section::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.movie-section > .movie-section-title{
+    color: var(--foreground);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 24px;
+    position: sticky;
+    left: 24px;
+}
+
+.movie-section > .movie-section-wrapper{
+    width: auto;
+    height: auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    column-gap: 24px;
+}
+
+.movie-section-wrapper > .movie-item{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    scroll-snap-align: center;
+}   
+
+.movie-item > .movie-item-poster{
+    width: calc(100vw / 2);
+    height: auto;
+    margin-bottom: 4px;
+}
+
+.movie-item > .movie-item-name{
+    color: var(--foreground);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    align-self: flex-start;
+}
+
+.movie-item > .movie-item-date{
+    color: var(--secondary);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    align-self: flex-start;
 }
