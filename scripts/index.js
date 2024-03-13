@@ -9,7 +9,7 @@ async function fetchMovies(type){
 }
 
 // Generate movies in hero section
-function generateHeroMovies(movieList){
+function generateHeroPosters(movieList){
     const heroSec = document.querySelector('.hero-section-wrapper');
     for(let i = 0; i < 5; i++){
         heroSec.innerHTML += 
@@ -23,4 +23,6 @@ function generateHeroMovies(movieList){
     }
 }
 
-fetchMovies('now_playing').then(data => generateHeroMovies(data))
+
+
+fetchMovies('now_playing').then(data => generateHeroPosters(data));
