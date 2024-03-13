@@ -191,23 +191,28 @@ main > .sidebar{
 }
 
 .hero-section-wrapper > .hero-item{
-    width: max-content;
+    width: 75vw;
     aspect-ratio: 2/3;
-    padding: 16px 16px;
+    padding: 24px;
     background-size: cover;
     background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    row-gap: 4px;
     scroll-snap-align: center;
 }
 
 .hero-item > .hero-item-name{
+    width: 100%; 
     color: var(--foreground);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .hero-item > .hero-item-trailer{
