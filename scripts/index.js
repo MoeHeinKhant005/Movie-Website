@@ -27,13 +27,6 @@ function generateHeroPosters(movieList){
 const movieTypes = ['top_rated', 'now_playing', 'upcoming'];
 const movieSections = ['trending', 'release', 'upcoming'];
 
-// Loop and fetch
-movieTypes.forEach((type, index) => {
-    fetchMovies(type).then(response => {
-        generateMovies(movieSections[index], response);
-    })
-})
-
 // Generate movies in every movie sections
 function generateMovies(section, movieData){
     movieData.forEach(data => {
@@ -47,4 +40,11 @@ function generateMovies(section, movieData){
     
 }
 
-fetchMovies('now_playing').then(data => generateHeroPosters(data));
+// Fetch and load movies on the page
+// Load hero poster
+fetchMovies('now_playing').then(response => generateHeroPosters(response));
+
+// Load movies in every movie section
+movieTypes.forEach((type, index) => {
+    fetchMovies(type).then(response => generateMovies(movieSections[index], response));
+});
