@@ -11,7 +11,7 @@
     </head>
     <body>
         <!-- Header -->
-        <header>
+        <header id="header-section">
             <div class="header-wrapper">
                 <i class="fa-solid fa-bars menu-icon"></i>
                 <h3 class="brand">C<span style="color: #4361EE;">i</span>NEMAX</h3>
@@ -29,11 +29,11 @@
                 <i class="fa-solid fa-xmark sidebar-close-icon"></i>
                 <div class="sidebar-wrapper">
                     <ul class="main-list">
-                        <li><a href="" class="sidebar-item">Home</a></li>
-                        <li><a href="" class="sidebar-item">Trending</a></li>
-                        <li><a href="" class="sidebar-item">Releases</a></li>
-                        <li><a href="" class="sidebar-item">Upcoming</a></li>
-                        <li><a href="" class="sidebar-item">Favorites</a></li>
+                        <li><a href="index.html#header-section" class="sidebar-item">Home</a></li>
+                        <li><a href="index.html#trending-section" class="sidebar-item">Trending</a></li>
+                        <li><a href="index.html#release-section" class="sidebar-item">Releases</a></li>
+                        <li><a href="index.html#upcoming-section" class="sidebar-item">Upcoming</a></li>
+                        <li><a href="index.html#favorite-section" class="sidebar-item">Favorites</a></li>
                     </ul>
                     <ul class="genre-list">
                         <span class="genre-title">Genre</span>
@@ -57,30 +57,30 @@
             </nav>
 
             <!-- Hero -->
-            <section class="hero-section">
+            <section class="hero-section" id="hero-section">
                 <div class="hero-section-wrapper"><!-- Movies will be generated here--></div>
             </section>
 
             <!-- Trending -->
-            <section class="trending-section movie-section">
+            <section class="trending-section movie-section" id="trending-section">
                 <h5 class="trending-section-title movie-section-title">Trending</h5>
                 <div class="trending-section-wrapper movie-section-wrapper"></div>
             </section>
 
             <!-- New Releases -->
-            <section class="release-section movie-section">
+            <section class="release-section movie-section" id="release-section">
                 <h5 class="release-section-title movie-section-title">Releases</h5>
                 <div class="release-section-wrapper movie-section-wrapper"></div>
             </section>
 
             <!-- Upcoming -->
-            <section class="upcoming-section movie-section">
+            <section class="upcoming-section movie-section" id="upcoming-section">
                 <h5 class="upcoming-section-title movie-section-title">Upcoming</h5>
                 <div class="upcoming-section-wrapper movie-section-wrapper"></div>
             </section>
 
             <!-- Favorites -->
-            <section class="favorite-section movie-section">
+            <section class="favorite-section movie-section" id="favorite-section">
                 <h5 class="favorite-section-title movie-section-title">Favorite</h5>
                 <div class="favorite-section-wrapper movie-section-wrapper">
                     <div class="movie-item">
@@ -91,6 +91,8 @@
                 </div>
             </section>
         </main>
+
+        <script src="scripts/sidebar.js"></script>
         <script src="scripts/index.js"></script>
     </body>
 </html>

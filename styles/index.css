@@ -94,18 +94,21 @@ main{
 
 /* Sidebar stylings */
 main > .sidebar{
-    width: 55%;
+    width: 60%;
     height: 100vh;
-    padding-bottom: 32px;
     background-color: var(--background);
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    position: absolute;
+    align-self: flex-start;
+    overflow-y: scroll;
+    position: fixed;
     top: 0px;
     left: 0px;
-    overflow-y: scroll;
+    z-index: 9;
+    transform: translateX(-100%);
+    transition: transform 150ms ease-in-out 0s;
 }
     
 /* Custom scrollbar */
@@ -128,6 +131,7 @@ main > .sidebar{
 .sidebar > .sidebar-wrapper{
     width: auto;
     height: auto;
+    padding-bottom: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -151,6 +155,11 @@ main > .sidebar{
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
+    transition: color 150ms ease-in-out 0s;
+}
+
+.sidebar-wrapper a:hover{
+    color: var(--foreground);
 }
 
 .genre-list > .genre-title{
