@@ -9,6 +9,15 @@
     --foreground: #FFFFFF;
     --background: #252525;
     --background-alt: #353535;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Microsoft Edge */
+    scroll-behavior: smooth;
+}
+
+/* Google chrome */
+*::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
 }
 
 body{
@@ -251,7 +260,7 @@ main > .sidebar{
 .movie-section{
     width: 100%;
     height: auto;
-    padding: 24px 0;
+    padding: 6px 0;
     background-color: var(--background);
     display: flex;
     flex-direction: column;
@@ -294,7 +303,7 @@ main > .sidebar{
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     scroll-snap-align: center;
 }   
@@ -306,11 +315,15 @@ main > .sidebar{
 }
 
 .movie-item > .movie-item-name{
+    width: calc(100vw / 2);
     color: var(--foreground);
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
     align-self: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .movie-item > .movie-item-date{
