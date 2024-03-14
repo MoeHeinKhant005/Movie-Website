@@ -336,3 +336,18 @@ main > .sidebar{
     font-size: 12px;
     align-self: flex-start;
 }
+
+/* Tablet View */
+@media only screen and (min-width: 768px){
+    main > .sidebar{
+        width: 40%;
+    } 
+
+    .hero-section-wrapper > .hero-item{
+        width: 35vw;
+    }
+
+    .movie-item > .movie-item-poster, .movie-item > .movie-item-name{
+        width: calc(100vw / 3);
+    }
+}
