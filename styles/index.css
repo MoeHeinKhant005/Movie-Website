@@ -99,9 +99,9 @@ main{
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 /* Sidebar stylings */
@@ -179,6 +179,16 @@ main > .sidebar{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 18px;
+}
+
+/* Section wrapper stylings */
+.sections-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 /* Hero section stylings */
@@ -349,5 +359,42 @@ main > .sidebar{
 
     .movie-item > .movie-item-poster, .movie-item > .movie-item-name{
         width: calc(100vw / 3);
+    }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1024px){
+    header{
+        position: fixed;
+        top: 0px;
+    }
+
+    .header-wrapper > i, .sidebar > .sidebar-close-icon{
+        display: none; 
+    }
+
+    .header-wrapper > .searchbar{
+        display: flex;
+    }
+
+    main > .sidebar{
+        width: 20%;
+        position: fixed;
+        top: 65px;
+        transform: none;
+        padding: 24px 0;
+    }
+
+    .sections-wrapper{
+        width: 80%;
+        padding-top: 65px;
+    }
+
+    .hero-section-wrapper > .hero-item{
+        width: calc(100vw / 5);
+    }
+
+    .movie-item > .movie-item-poster, .movie-item > .movie-item-name{
+        width: calc(100vw / 6);
     }
 }
