@@ -1,0 +1,94 @@
+/* Sidebar stylings */
+main > .sidebar{
+    width: 60%;
+    height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    transform: translateX(-100%);
+    transition: transform 150ms ease-in-out 0s;
+}
+    
+/* Custom scrollbar */
+.sidebar::-webkit-scrollbar{
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: var(--background-alt);
+    border-radius: 5px;
+}
+
+.sidebar > .sidebar-close-icon{
+    color: var(--foreground);
+    font-size: 24px;
+    margin: 32px;
+    align-self: flex-end;
+}
+
+.sidebar > .sidebar-wrapper{
+    width: auto;
+    height: auto;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    row-gap: 16px;
+}
+
+.sidebar-wrapper > .main-list, .sidebar-wrapper > .genre-list{
+    width: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 16px;
+}
+
+.main-list a, .genre-list a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 150ms ease-in-out 0s;
+}
+
+.sidebar-wrapper a:hover{
+    color: var(--foreground);
+}
+
+.genre-list > .genre-title{
+    color: var(--foreground);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* Tablet View */
+@media only screen and (min-width: 768px){
+    main > .sidebar{
+        width: 40%;
+    } 
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1024px){
+    main > .sidebar{
+        width: 20%;
+        position: fixed;
+        top: 65px;
+        transform: none;
+        padding: 24px 0;
+    }
+}
