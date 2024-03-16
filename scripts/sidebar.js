@@ -12,17 +12,26 @@ closeIcon.onclick = function(){
     sidebar.style.transform = "translateX(-100%)";
 }
 
-// Redirecting to movies.html when clicked
-const links = document.querySelectorAll('.sidebar-item');
-links.forEach(link => {
+// Redirecting functionalities on mainLinks 
+const mainLinks = document.querySelectorAll('.main-list .sidebar-item')
+mainLinks.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
-        if(e.target.textContent != "Home"){
-            sessionStorage.setItem('clickedLink', e.target.textContent);
-            sessionStorage.setItem('clickedLinkId', e.target.getAttribute('data-movieId'))
-            location.href = "/pages/movies.html";
-        }else if(e.target.textContent == "Home"){
+        if(e.target.textContent == "Home"){
             location.href = "../index.html";
+        }else{
+            sessionStorage.setItem('movieTopic', e.target.textContent);
+            sessionStorage.setItem('movieTopicId', e.target.getAttribute('data-movieId'));
         }
+    })
+})
+
+// Redirecting functionalities on genreLinks
+const genreLinks = document.querySelectorAll('.genre-list .sidebar-item');
+genreLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        sessionStorage.setItem('movieGenre', e.target.textContent);
+        sessionStorage.setItem('movieGenreId', e.target.getAttribute('data-genreId'));
     })
 })

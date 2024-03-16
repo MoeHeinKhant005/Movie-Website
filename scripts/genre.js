@@ -1,19 +1,19 @@
-const movieTopic = sessionStorage.getItem('clickedLink');
-const movieTopicId = sessionStorage.getItem('clickedLinkId');
+const movieGenre = sessionStorage.getItem('movieGenre');
+const movieGenreId = sessionStorage.getItem('movieGenreId');
 
 // Setting the titles
 const windowTitle = document.querySelector('title');
 const sectionTitle = document.querySelector('.movies-section-title');
-windowTitle.textContent = `${movieTopic} Movies`;
-sectionTitle.textContent = movieTopic;
+windowTitle.textContent = `${movieGenre} Movies`;
+sectionTitle.textContent = movieGenre;
 
-// Fetch movies from API 
+// Fetch movies from API
 const apiKey = '531427db4c2df639e1c2babd568734c5';
 const imageBaseUrl = 'https://image.tmdb.org/t/p/w1280';
 
-async function fetchMovies(movieTopic){
-    const response = await fetch(`https://api.themoviedb.org/3/movie/${movieTopic}?api_key=${apiKey}`);
-    const data = await response.json();
+async function fetchMovies(genreId){
+    const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genreId}`);
+    const data = response.json();
     return data;
 }
 
@@ -31,4 +31,4 @@ function generateMovies(movieData){
 }
 
 // Load movies
-fetchMovies(movieTopicId).then(response => generateMovies(response));
+fetchMovies(movieGenreId).then(response => generateMovies(response));
