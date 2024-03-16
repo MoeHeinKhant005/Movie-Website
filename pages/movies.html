@@ -6,10 +6,62 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Importing fontawesome -->
         <script src="https://kit.fontawesome.com/c2aca38d15.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles/movies.css">
         <title>Blah Blah</title>
     </head>
     <body>
+        <!-- Header -->
+        <header>
+            <div class="header-wrapper">
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <h3 class="brand">C<span style="color: #4361EE;">i</span>NEMAX</h3>
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <div class="searchbar">
+                    <input type="text" class="searchbar-input" placeholder="Search a movie or series...">
+                    <i class="fa-solid fa-magnifying-glass searchbar-icon"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Sidebar -->
+            <nav class="sidebar">
+                <i class="fa-solid fa-xmark sidebar-close-icon"></i>
+                <div class="sidebar-wrapper">
+                    <ul class="main-list">
+                        <li><a href="index.html#body" class="sidebar-item">Home</a></li>
+                        <li><a href="index.html#trending-section" class="sidebar-item">Trending</a></li>
+                        <li><a href="index.html#release-section" class="sidebar-item">Releases</a></li>
+                        <li><a href="index.html#upcoming-section" class="sidebar-item">Upcoming</a></li>
+                        <li><a href="index.html#favorite-section" class="sidebar-item">Favorites</a></li>
+                    </ul>
+                    <ul class="genre-list">
+                        <span class="genre-title">Genre</span>
+                        <li><a href="" class="sidebar-item">Action</a></li>
+                        <li><a href="" class="sidebar-item">Adventure</a></li>
+                        <li><a href="" class="sidebar-item">Animation</a></li>
+                        <li><a href="" class="sidebar-item">Crime</a></li>
+                        <li><a href="" class="sidebar-item">Drama</a></li>
+                        <li><a href="" class="sidebar-item">Documentary</a></li>
+                        <li><a href="" class="sidebar-item">Horror</a></li>
+                        <li><a href="" class="sidebar-item">History</a></li>
+                        <li><a href="" class="sidebar-item">Mystery</a></li>
+                        <li><a href="" class="sidebar-item">Music</a></li>
+                        <li><a href="" class="sidebar-item">Sci-Fi</a></li>
+                        <li><a href="" class="sidebar-item">Thriller</a></li>
+                        <li><a href="" class="sidebar-item">Romance</a></li>
+                        <li><a href="" class="sidebar-item">War</a></li>
+                        <li><a href="" class="sidebar-item">TV Series</a></li>
+                    </ul>
+                </div> 
+            </nav>
+        </main>
+
+        <script src="../scripts/header.js"></script>
+        <script src="../scripts/sidebar.js"></script>
         <script src="../scripts/movies.js"></script>
     </body>
 </html>
