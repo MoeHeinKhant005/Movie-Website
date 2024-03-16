@@ -32,3 +32,73 @@ main{
     justify-content: flex-end;
     align-items: flex-start;
 }
+
+/* Movies section stylings */
+main > .movies-section{
+    width: 100%;
+    height: auto;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 16px;
+}
+
+.movies-section > .movies-section-title{
+    color: var(--foreground);
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 24px;
+}
+
+.movies-section > .movies-section-wrapper{
+    width: 100%;
+    height: auto;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 12px;
+}
+
+/* Movie items stylings */
+.movies-section-wrapper > .movie-item{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-snap-align: center;
+}   
+
+.movie-item > .movie-item-poster{
+    width: calc(100vw / 2 - 16px);
+    height: auto;
+    margin-bottom: 4px;
+}
+
+.movie-item > .movie-item-name{
+    width: calc(100vw / 2 - 16px);
+    color: var(--foreground);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    align-self: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movie-item > .movie-item-date{
+    color: var(--secondary);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    align-self: flex-start;
+}
