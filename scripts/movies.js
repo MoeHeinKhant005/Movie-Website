@@ -1,5 +1,5 @@
-const movieTopic = sessionStorage.getItem('clickedLink');
-const movieTopicId = sessionStorage.getItem('clickedLinkId');
+const movieTopic = sessionStorage.getItem('movieTopic');
+const movieTopicId = sessionStorage.getItem('movieTopicId');
 
 // Setting the titles
 const windowTitle = document.querySelector('title');

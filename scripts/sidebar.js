@@ -22,6 +22,8 @@ mainLinks.forEach(link => {
         }else{
             sessionStorage.setItem('movieTopic', e.target.textContent);
             sessionStorage.setItem('movieTopicId', e.target.getAttribute('data-movieId'));
+            sessionStorage.setItem('scriptToLoad', 'movies.js');
+            location.href = "../pages/movies.html";
         }
     })
 })
@@ -33,5 +35,7 @@ genreLinks.forEach(link => {
         e.preventDefault();
         sessionStorage.setItem('movieGenre', e.target.textContent);
         sessionStorage.setItem('movieGenreId', e.target.getAttribute('data-genreId'));
+        sessionStorage.setItem('scriptToLoad', 'genre.js');
+        location.href = "../pages/movies.html";
     })
 })
