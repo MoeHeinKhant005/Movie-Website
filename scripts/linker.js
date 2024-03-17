@@ -1,6 +1,5 @@
 // Get the right script that needs to load in movies.html page
 const scriptToLoad = sessionStorage.getItem('scriptToLoad');
-console.log(scriptToLoad)
 
 // Function to create a new script element
 function addScript(scriptName){

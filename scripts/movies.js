@@ -11,8 +11,8 @@ sectionTitle.textContent = movieTopic;
 const apiKey = '531427db4c2df639e1c2babd568734c5';
 const imageBaseUrl = 'https://image.tmdb.org/t/p/w1280';
 
-async function fetchMovies(movieTopic){
-    const response = await fetch(`https://api.themoviedb.org/3/movie/${movieTopic}?api_key=${apiKey}`);
+async function fetchMovies(movieTopic, pageNum){
+    const response = await fetch(`https://api.themoviedb.org/3/movie/${movieTopic}?api_key=${apiKey}&page=${pageNum}`);
     const data = await response.json();
     return data;
 }
@@ -30,5 +30,17 @@ function generateMovies(movieData){
     })
 }
 
+// Load more movies when the loadMore button is clicked
+const loadMoreBtn = document.querySelector('.loadMoreBtn');
+let currentDataPage = 1;
+function loadMore(){
+    currentDataPage++;
+    fetchMovies(movieTopicId, currentDataPage).then(response => generateMovies(response));
+}
+
+loadMoreBtn.onclick = function(){
+    loadMore();
+}
+
 // Load movies
-fetchMovies(movieTopicId).then(response => generateMovies(response));
+fetchMovies(movieTopicId, currentDataPage).then(response => generateMovies(response));
