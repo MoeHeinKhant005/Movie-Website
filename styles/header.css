@@ -63,6 +63,40 @@ header > .header-wrapper{
     font-size: 16px;
 }
 
+/* Popup Searchbar stylings */
+.search-popup{
+    width: auto;
+    height: auto;
+    padding: 16px 24px;
+    background-color: var(--background-alt);
+    border: 2px solid var(--primary);
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    position: absolute;
+    top: 100px;
+}
+
+.search-popup > .search-popup-input{
+    width: 60vw;
+    height: auto;
+    padding: 0 4px;
+    color: var(--foreground);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.search-popup > .search-popup-icon{
+    color: #858585;
+    font-size: 16px;
+}
+
 @media only screen and (min-width: 1024px){
     header{
         position: fixed;
