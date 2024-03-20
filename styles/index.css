@@ -221,6 +221,8 @@ main{
     .sections-wrapper{
         width: 80%;
         padding-top: 65px;
+        position: sticky;
+        top: 65px;
     }
 
     .hero-section-wrapper > .hero-item{

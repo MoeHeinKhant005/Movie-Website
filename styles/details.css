@@ -22,7 +22,7 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -41,7 +41,7 @@ main{
 
 main > .details-section{
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 65px);
     height: auto;
     background-color: var(--background);
     display: flex;
@@ -166,6 +166,8 @@ main > .details-section{
     main > .details-section{
         width: 80%;
         padding-top: 65px;
+        position: sticky;
+        top: 65px;
     }
 
     .details-section-wrapper > .details-movie-poster{

@@ -12,7 +12,7 @@ main > .sidebar{
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 9;
+    z-index: 50;
     transform: translateX(-100%);
     transition: transform 150ms ease-in-out 0s;
 }
@@ -86,9 +86,9 @@ main > .sidebar{
 @media only screen and (min-width: 1024px){
     main > .sidebar{
         width: 20%;
+        padding: 24px 0;
+        transform: none;
         position: fixed;
         top: 65px;
-        transform: none;
-        padding: 24px 0;
     }
 }

@@ -140,6 +140,8 @@ main > .movies-section{
     main > .movies-section{
         width: 80%;
         padding-top: 65px;
+        position: sticky;
+        top: 65px;
     }
 
     .movies-section > .movies-section-title{
