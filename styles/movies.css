@@ -108,7 +108,7 @@ main > .movies-section{
     width: 110px;
     height: 40px;
     margin-bottom: 24px;
-    color: var(--background);
+    color: var(--foreground);
     background-color: var(--primary);
     border: 2px solid var(--primary);
     outline: none;
@@ -122,4 +122,35 @@ main > .movies-section{
 .loadMoreBtn:hover{
     color: var(--primary);
     background-color: var(--background);
+}
+
+/* Tablet View */
+@media only screen and (min-width: 768px){
+    .hero-section-wrapper > .hero-item{
+        width: 35vw;
+    }
+
+    .movie-item > .movie-item-poster, .movie-item > .movie-item-name{
+        width: calc(100vw / 3);
+    }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1024px){
+    main > .movies-section{
+        width: 80%;
+        padding-top: 65px;
+    }
+
+    .movies-section > .movies-section-title{
+        padding: 0 5vw;
+    }
+
+    .hero-section-wrapper > .hero-item{
+        width: calc(100vw / 5);
+    }
+
+    .movie-item > .movie-item-poster, .movie-item > .movie-item-name{
+        width: calc(100vw / 6);
+    }
 }

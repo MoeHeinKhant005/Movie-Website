@@ -207,10 +207,6 @@ main{
 
 /* Tablet View */
 @media only screen and (min-width: 768px){
-    main > .sidebar{
-        width: 40%;
-    } 
-
     .hero-section-wrapper > .hero-item{
         width: 35vw;
     }
@@ -222,14 +218,6 @@ main{
 
 /* Desktop View */
 @media only screen and (min-width: 1024px){
-    main > .sidebar{
-        width: 20%;
-        position: fixed;
-        top: 65px;
-        transform: none;
-        padding: 24px 0;
-    }
-
     .sections-wrapper{
         width: 80%;
         padding-top: 65px;
