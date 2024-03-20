@@ -21,11 +21,15 @@ function generateSearchMovies(movieData){
     movieData.results.forEach(data => {
         movieSection.innerHTML += 
         `<div class="movie-item">
-            <img src="${imagebaseurl + data.poster_path}" alt="${data.original_title}" class="movie-item-poster">
+            <img src="${imagebaseurl + data.poster_path}" alt="${data.original_title}" class="movie-item-poster" onclick="redirectToDetails(${data.id})">
             <span class="movie-item-name">${data.original_title}</span>
             <span class="movie-item-date">${data.release_date.slice(0,4)}</span>
-        </div>`
+        </div>`;
     })
+    // Hide the loadMoreBtn if the data length isn't more than one page
+    if(movieData.results.length < 20){
+        loadMoreBtn.style.display = "none";
+    }
 }
 
 // Load more movies when the loadMore button is clicked
@@ -41,3 +45,9 @@ loadMoreBtn.onclick = () => {
 
 // Query and load movies from the api data 
 fetchSearchMovies(searchKeyword, currentDataPage).then(response => generateSearchMovies(response));
+
+// Redirect to movies detail page
+function redirectToDetails(movieId){
+    sessionStorage.setItem('clickedMovieId', movieId);
+    location.href = "./details.html";
+}
