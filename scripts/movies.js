@@ -23,7 +23,7 @@ function generateMovies(movieData){
     movieData.results.forEach(data => {
         moviesSection.innerHTML += 
         `<div class="movie-item">
-            <img src="${imageBaseUrl + data.poster_path}" alt="${data.original_title}" class="movie-item-poster">
+            <img src="${imageBaseUrl + data.poster_path}" alt="${data.original_title}" class="movie-item-poster" onclick="redirectToDetails(${data.id})">
             <span class="movie-item-name">${data.original_title}</span>
             <span class="movie-item-date">${data.release_date.slice(0,4)}</span>
         </div>`;
@@ -44,3 +44,9 @@ loadMoreBtn.onclick = function(){
 
 // Load movies
 fetchMovies(movieTopicId, currentDataPage).then(response => generateMovies(response));
+
+// Redirect to movies detail page
+function redirectToDetails(movieId){
+    sessionStorage.setItem('clickedMovieId', movieId);
+    location.href = "./details.html";
+}

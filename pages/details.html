@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang='en'>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Importing fontawesome -->
+        <script src="https://kit.fontawesome.com/c2aca38d15.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/sidebar.css">
+        <link rel="stylesheet" href="../styles/details.css">
+        <title></title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="header-wrapper">
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <h3 class="brand">C<span style="color: #4361EE;">i</span>NEMAX</h3>
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <div class="searchbar">
+                    <input type="text" class="searchbar-input" placeholder="Search a movie or series...">
+                    <i class="fa-solid fa-magnifying-glass searchbar-icon"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Sidebar -->
+            <nav class="sidebar">
+                <i class="fa-solid fa-xmark sidebar-close-icon"></i>
+                <div class="sidebar-wrapper">
+                    <ul class="main-list">
+                        <li><a href="" class="sidebar-item">Home</a></li>
+                        <li><a href="" class="sidebar-item" data-movieId="top_rated">Trending</a></li>
+                        <li><a href="" class="sidebar-item" data-movieId="now_playing">Releases</a></li>
+                        <li><a href="" class="sidebar-item" data-movieId="upcoming">Upcoming</a></li>
+                        <li><a href="" class="sidebar-item" data-movieId="favorites">Favorites</a></li>
+                    </ul>
+                    <ul class="genre-list">
+                        <span class="genre-title">Genre</span>
+                        <li><a href="" class="sidebar-item" data-genreId="28">Action</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="12">Adventure</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="16">Animation</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="80">Crime</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="18">Drama</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="99">Documentary</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="27">Horror</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="36">History</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="9648">Mystery</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="10402">Music</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="878">Sci-Fi</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="53">Thriller</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="10749">Romance</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="10752">War</a></li>
+                        <li><a href="" class="sidebar-item" data-genreId="10770">TV Series</a></li>
+                    </ul>
+                </div> 
+            </nav> 
+
+            <!-- Details -->
+            <section class="details-section">
+                <div class="details-section-wrapper"></div>
+            </section>
+        </main>
+
+        <!-- Popup Searchbar for mobile view -->
+        <div class="search-popup">
+            <input type="text" class="search-popup-input" placeholder="Search a movie or series...">
+            <i class="fa-solid fa-magnifying-glass search-popup-icon"></i>
+        </div>
+
+        <script src="../scripts/header.js"></script>
+        <script src="../scripts/sidebar.js"></script>
+        <script src="../scripts/details.js"></script>
+    </body>
+</html>

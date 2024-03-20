@@ -1,0 +1,188 @@
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Poppins:wght@600;700&display=swap');
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    --primary: #4361EE;
+    --secondary: #757575;
+    --foreground: #FFFFFF;
+    --background: #252525;
+    --background-alt: #353535;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Microsoft Edge */
+    scroll-behavior: smooth;
+}
+
+/* Google chrome */
+*::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Main section stylings */
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main > .details-section{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.details-section > .details-section-wrapper{
+    width: 85%;
+    height: auto;
+    padding: 16px 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 16px;
+}
+
+.details-section-wrapper > .details-movie-poster{
+    width: 55%;
+}
+
+.details-section-wrapper > .details-movie-title{
+    color: var(--foreground);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.details-section-wrapper > .details-movie-info{
+    color: var(--foreground);
+    background-color: var(--background-alt);
+    padding: 4px 8px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    column-gap: 16px;
+}
+
+.details-section-wrapper > .details-movie-genres{
+    width: auto;
+    max-width: 90vw;
+    color: var(--foreground);
+    background-color: var(--background-alt);
+    padding: 4px 8px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.details-section-wrapper > .details-movie-overview{
+    color: var(--foreground);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.details-section-wrapper > .button-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 16px;
+}
+
+.button-wrapper > .view-trailer-btn{
+    width: 100%;
+    height: 45px;
+    color: var(--foreground);
+    background-color: var(--background-alt);
+    border: 2px solid var(--background-alt);
+    outline: none;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 150ms ease-out 0s;
+}
+
+.button-wrapper > .view-trailer-btn:hover{
+    border: 2px solid var(--foreground);
+    background-color: var(--background);
+}
+
+.button-wrapper > .watch-movie-btn{
+    width: 100%;
+    height: 45px;
+    color: var(--foreground);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    outline: none;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 150ms ease-out 0s;
+}
+
+.button-wrapper > .watch-movie-btn:hover{
+    color: var(--primary);
+    background-color: var(--background);
+}
+
+/* Tablet view at 768px */
+@media only screen and (min-width: 768px){
+    .details-section-wrapper > .details-movie-poster{
+        width: 40%;
+    }
+}
+
+/* Desktop view at 1024px */
+@media only screen and (min-width: 1024px){
+    main {
+        justify-content: flex-end;
+    }
+
+    main > .details-section{
+        width: 80%;
+        padding-top: 65px;
+    }
+
+    .details-section-wrapper > .details-movie-poster{
+        width: 25%;
+    }
+
+    .details-section-wrapper > .details-movie-overview{
+        width: 75%;
+    }
+
+    .details-section-wrapper > .button-wrapper{
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 24px;
+    }
+
+    .button-wrapper > .view-trailer-btn, .button-wrapper > .watch-movie-btn{
+        width: 25%;
+    }
+}

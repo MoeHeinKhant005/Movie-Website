@@ -32,7 +32,7 @@ function generateMovies(section, movieData){
     movieData.forEach(data => {
         document.querySelector(`.${section}-section-wrapper`).innerHTML += 
         `<div class="movie-item">
-            <img src="${imageBaseUrl + data.poster_path}" alt="${data.original_title}" class="movie-item-poster">
+            <img src="${imageBaseUrl + data.poster_path}" alt="${data.original_title}" class="movie-item-poster" onclick="redirectToDetails(${data.id})">
             <span class="movie-item-name">${data.original_title}</span>
             <span class="movie-item-date">${data.release_date.slice(0,4)}</span>
         </div>`;
@@ -48,3 +48,9 @@ fetchMovies('now_playing').then(response => generateHeroPosters(response));
 movieTypes.forEach((type, index) => {
     fetchMovies(type).then(response => generateMovies(movieSections[index], response));
 });
+
+// Redirect to movies detail page
+function redirectToDetails(movieId){
+    sessionStorage.setItem('clickedMovieId', movieId);
+    location.href = "./pages/details.html";
+}
