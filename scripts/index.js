@@ -54,3 +54,6 @@ function redirectToDetails(movieId){
     sessionStorage.setItem('clickedMovieId', movieId);
     location.href = "./pages/details.html";
 }
+
+// Clear session storage
+sessionStorage.clear();
